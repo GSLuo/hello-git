@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>當前時戳</title>
+	<style type="text/css">
+		.box {
+			font-family:Microsoft JhengHei;
+			background-color:#46B49A;
+			font-size: 30px;
+			color: white;
+			padding: 20px;
+			border-radius: 10px;
+			font-weight: bold;
+
+			
+			position: fixed;
+        	top: 48%;
+        	left: 50%;
+        	transform: translate(-50%,-50%);
+        	
+		}
+		.changebotton{
+			border-style:solid;
+			border-color: black;
+			border-width: thin;
+			font-family:Microsoft JhengHei;
+			background-color:white;
+			font-size: 20px;
+			color: #46B49A;
+			padding: 6px 12px;
+			border-radius: 10px;
+			font-weight: bold;
+
+			
+			position: fixed;
+        	top: 58%;
+        	left: 50%;
+        	transform: translate(-50%,-50%);
+        	
+
+        	cursor: pointer;
+        	user-select: none;
+		}
+		.changebotton:hover{
+			background-color: #EFEFEF;
+			transition:  background .20s cubic-bezier( 0.3, 0.7 , 0.3 , 0.7);
+		}
+		.box2{
+			background-color:white;
+			border-radius: 10px;
+
+			position: absolute;
+        	top: 50%;
+        	left: 50%;
+        	transform: translate(-50%,-50%);
+
+        	border-style:solid;
+			border-color: black;
+			border-width: thin;
+
+			width: 600px;
+			height: 300px;
+
+			opacity:0.8;
+		}
+		
+		html {
+            height: 100%;
+        }
+
+        body {
+            background-image: url(phpBo9wcS.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+	</style>
+</head>
+<body bgcolor="E8ECEE" >
+
+		<div class="box2"></div>
+			<div id="box" class="box" ></div>
+			<div onclick="change()" class="changebotton">更新時戳</div>
+
+		<div><span id="auto2" ></span></div>
+
+
+</body>
+<script type="text/javascript">
+	function change(){
+
+		var Now2 = (Date.parse(new Date())+28800000)/1000;
+			box.innerHTML="時戳："+Now2;
+			//setTimeout("change()", 1000)
+	}
+	change()
+	//change()
+	function auto(){
+
+		var Now3 = (Date.parse(new Date())+28800000)/1000;
+			auto2.innerHTML="時戳："+Now3;
+			setTimeout("auto()", 1000)
+	}
+	auto()
+		</script>
+	
+</html>
